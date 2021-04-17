@@ -11,7 +11,7 @@ import (
 // permutation is done using the sorting + priority algorythms
 func SortingPermutation(tab []int) []int {
 	length := float64(len(tab))
-	rand.New(rand.NewSource(time.Now().UnixNano()))
+	r1 := rand.New(rand.NewSource(time.Now().UnixNano()))
 	newTab := PermutationTable{
 		[]PermutationItem{},
 	}
@@ -19,7 +19,7 @@ func SortingPermutation(tab []int) []int {
 	for _, value := range tab {
 		newTab.tab = append(newTab.tab, PermutationItem{
 			value,
-			rand.Intn(int(math.Pow(length, 3))),
+			r1.Intn(int(math.Pow(length, 3))),
 		})
 	}
 	newTab.sort()
