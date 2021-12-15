@@ -6,7 +6,7 @@ import (
 
 type Stack []int
 
-func Create() *Stack {
+func CreateStack() *Stack {
 	x := Stack{}
 	return &x
 }

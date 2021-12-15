@@ -5,7 +5,7 @@ import (
 )
 
 func TestCreate(t *testing.T) {
-	stack := Create()
+	stack := CreateStack()
 
 	if len(*stack) != 0 {
 		t.Fatalf("Stack not created properly!")
@@ -13,7 +13,7 @@ func TestCreate(t *testing.T) {
 }
 
 func TestPush(t *testing.T) {
-	stack := Create()
+	stack := CreateStack()
 
 	stack.Push(10)
 	stack.Push(20)
@@ -24,7 +24,7 @@ func TestPush(t *testing.T) {
 }
 
 func TestPop(t *testing.T) {
-	stack := Create()
+	stack := CreateStack()
 
 	stack.Push(10)
 	stack.Push(20)
